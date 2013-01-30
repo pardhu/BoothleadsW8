@@ -1,0 +1,55 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="BoothLeads.blEventExhibitors"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0,0,0,0"></StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Background="#F0F1EB" Grid.Row="1" Margin="0,60,0,0" Loaded="ContentPanel_Loaded">
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="6,24,0,0" Name="textBlock1" Text="Website" VerticalAlignment="Top" Width="138" OpacityMask="#FF160C0C" Foreground="Black" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="150,24,0,0" Name="website" Text="" VerticalAlignment="Top" Width="294" Foreground="Black" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="6,60,0,0" Name="textBlock3" Text="Name" VerticalAlignment="Top" Width="138" OpacityMask="#FF160C0C" Foreground="Black" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="150,60,0,0" Name="name" Text="" VerticalAlignment="Top" Width="294" Foreground="Black" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="6,96,0,0" Name="textBlock5" Text="Description" VerticalAlignment="Top" Width="138" OpacityMask="#FF160C0C" Foreground="Black" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="150,96,0,0" Name="description" Text="" VerticalAlignment="Top" Width="294" Foreground="Black" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="6,132,0,0" Name="textBlock7" Text="Phone number" VerticalAlignment="Top" Width="138" OpacityMask="#FF160C0C" Foreground="Black" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="150,132,0,0" Name="phonenumber" Text="" VerticalAlignment="Top" Width="294" Foreground="Black" />
+            <TextBlock Foreground="Black" Height="30" HorizontalAlignment="Left" Margin="6,170,0,0" Name="lblContactName" OpacityMask="#FF160C0C" Text="Contact Person Name" VerticalAlignment="Top" Width="138" />
+            <TextBlock Foreground="Black" Height="30" HorizontalAlignment="Left" Margin="150,170,0,0" Name="txtContactPersonName" Text="" VerticalAlignment="Top" Width="294" />
+            <TextBlock Foreground="Black" Height="30" HorizontalAlignment="Left" Margin="6,206,0,0" Name="lblEmailAddress" OpacityMask="#FF160C0C" Text="Email" VerticalAlignment="Top" Width="138" />
+            <TextBlock Foreground="Black" Height="30" HorizontalAlignment="Left" Margin="150,206,0,0" Name="txtEmailAddress" Text="" VerticalAlignment="Top" Width="294" />
+        </Grid>
+    </Grid>
+ 
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>

@@ -1,0 +1,111 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="BoothLeads.UserProfile"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0,0,0,0"></StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid  x:Name="ContentPanel" Background="WhiteSmoke" Grid.RowSpan="2" Margin="0,60,0,0" Loaded="ContentPanel_Loaded">
+            <Grid Height="480" ShowGridLines="True" HorizontalAlignment="Left" Margin="13,100,0,0" Name="grdSnsSettings" VerticalAlignment="Top" Width="453">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90" />
+                    <RowDefinition Height="90" />
+                    <RowDefinition Height="90" />
+                    <RowDefinition Height="90" />
+                    <RowDefinition Height="90" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <RadioButton Name="rdoFaceBook" BorderBrush="LightGray" HorizontalAlignment="Left" Content="Facebook" Grid.Column="1" Grid.Row="1" Margin="10,15,0,0" Foreground="Black" ></RadioButton>
+                <RadioButton Name="rdoLinkedin" BorderBrush="LightGray" HorizontalAlignment="Left" Content="Linkedin" Grid.Column="1" Grid.Row="2" Margin="10,15,0,0" Foreground="Black" ></RadioButton>
+                <RadioButton Name="rdoTwitter" BorderBrush="LightGray" HorizontalAlignment="Left" Content="Twitter" Grid.Column="1" Grid.Row="3" Margin="10,15,0,0" Foreground="Black" ></RadioButton>
+                <RadioButton Name="rdoFoursquare" BorderBrush="LightGray" HorizontalAlignment="Left" Content="Foursquare" Grid.Column="1" Grid.Row="4" Margin="10,15,0,0" Foreground="Black" ></RadioButton>
+            </Grid>
+            <Grid Height="550" ShowGridLines="False" HorizontalAlignment="Left" Margin="13,100,0,0" Name="grdAbout" VerticalAlignment="Top" Width="453">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90" />
+                    <RowDefinition Height="90" />
+                    <RowDefinition Height="90" />
+                    <RowDefinition Height="90" />
+                    <RowDefinition Height="90" />
+                    <RowDefinition Height="90" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button BorderBrush="LightGray" Name="btnHelpDesk" Background="Transparent" Content="Help Desk" Foreground="Black" HorizontalContentAlignment="Left" Grid.Column="1" Grid.Row="1" Margin="10,15,0,0" ></Button>
+                <Button BorderBrush="LightGray" Name="btnBoothleadsOnweb" Background="Transparent" Content="Booth Leads on the Web" Foreground="Black" HorizontalContentAlignment="Left" Grid.Column="1" Grid.Row="2" Margin="10,16,0,0"></Button>
+                <Button BorderBrush="LightGray" Name="BoothleadsBlog" Background="Transparent" Content="Boothleads Blog" Foreground="Black" HorizontalContentAlignment="Left" Grid.Column="1" Grid.Row="3" Margin="10,10,0,0"></Button>
+                <Button BorderBrush="LightGray" Name="TermsofService" Background="Transparent" Content="Terms of Service" Foreground="Black" HorizontalContentAlignment="Left" Grid.Column="1" Grid.Row="4" Margin="10,10,0,0"></Button>
+                <Button BorderBrush="LightGray" Name="btnPrivacypolicy" Background="Transparent" Content="Privacy Policy" Foreground="Black" HorizontalContentAlignment="Left" Grid.Column="1" Grid.Row="5" Margin="10,10,0,0"></Button>
+            </Grid>
+            <Grid Height="410" ShowGridLines="True" HorizontalAlignment="Left" Margin="16,279,0,0" Name="grdUserProfile" VerticalAlignment="Top" Width="453">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="84" />
+                    <RowDefinition Height="84"  />
+                    <RowDefinition Height="84"/>
+                    <RowDefinition Height="84" />
+                    <RowDefinition Height="84" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="177*" />
+                    <ColumnDefinition Width="276" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Foreground="Black" Height="32" HorizontalAlignment="Left" Margin="52,30,0,0" Name="textBox1" Text="EMAIL" VerticalAlignment="Top" Width="74"  FontSize="20" />
+                <TextBlock Foreground="Black" Height="36" HorizontalAlignment="Left" Margin="52,24,0,0" Name="textBox2" Text="PHONE" VerticalAlignment="Top" Width="94" Grid.Row="1" FontSize="20" />
+                <TextBlock Foreground="Black" Height="33" HorizontalAlignment="Left" Margin="50,26,0,0" Name="textBox3" Text="COMPANY" VerticalAlignment="Top" Width="94" Grid.Row="2" FontSize="18" />
+                <TextBlock Foreground="Black" Height="28" HorizontalAlignment="Left" Margin="52,25,0,0" Name="textBox4" Text="CITY" VerticalAlignment="Top" Width="70" Grid.Row="3" FontSize="18" />
+                <TextBlock Foreground="Black" Height="29" HorizontalAlignment="Left" Margin="53,26,0,0" Name="textBox5" Text="STATE" VerticalAlignment="Top" Width="59" Grid.Row="4" FontSize="18" />
+                <TextBlock Foreground="Black" Grid.Column="1" Height="45" HorizontalAlignment="Left" Margin="13,30,0,0" Name="txtEmail" Text="" VerticalAlignment="Top" Width="257" />
+                <TextBlock Foreground="Black" Height="45" HorizontalAlignment="Left" Margin="13,22,0,0" Name="txtPhone" Text="" VerticalAlignment="Top" Width="257" Grid.Column="1" Grid.Row="1" />
+                <TextBlock Foreground="Black" Height="45" HorizontalAlignment="Left" Margin="13,24,0,0" Name="txtCompany" Text="" VerticalAlignment="Top" Width="257" Grid.Column="1" Grid.Row="2" />
+                <TextBlock Foreground="Black" Height="45" HorizontalAlignment="Left" Margin="13,21,0,0" Name="txtCity" Text="" VerticalAlignment="Top" Width="257" Grid.Column="1" Grid.Row="3" />
+                <TextBlock Foreground="Black" Height="45" HorizontalAlignment="Left" Margin="13,22,0,0" Name="txtState" Text="" VerticalAlignment="Top" Width="257" Grid.Column="1" Grid.Row="4" />
+            </Grid>
+            <Image  Height="85" HorizontalAlignment="Left" Margin="16,190,0,0" Name="userImage" Stretch="Fill" VerticalAlignment="Top" Width="112" />
+            <TextBlock Foreground="Black" Height="37" HorizontalAlignment="Left" Margin="155,190,0,0" Name="txtFirstName" Text="First Name" VerticalAlignment="Top" Width="308" />
+            <TextBlock Foreground="Black" Height="37" HorizontalAlignment="Left" Margin="155,236,0,0" Name="txtLastName" Text="Last Name" VerticalAlignment="Top" Width="308" />
+            <Image Height="85" HorizontalAlignment="Left" Margin="10,10,0,0" Name="pageHeaderImage" Stretch="Fill" VerticalAlignment="Top" Width="112" />
+            <Button Background="#3F540F" Content="Up Coming Events" Height="72" HorizontalAlignment="Left" Margin="119,23,0,0" Name="button1" VerticalAlignment="Top" Width="177" FontSize="14" />
+            <Button Background="#3F540F" Content="Past Events" Height="72" HorizontalAlignment="Right" Margin="0,23,81,0" Name="btnPastEvents" VerticalAlignment="Top" Width="127" FontSize="15" />
+            <Button Background="#3F540F" Content="Leads" Height="72" HorizontalAlignment="Right" Margin="0,23,2,0" Name="button2" VerticalAlignment="Top" Width="106" FontSize="15" Click="button2_Click" />
+            <Button Background="Transparent" Content="User Profile" Height="72" HorizontalAlignment="Left" Margin="2,101,0,0" Name="btnUserProfile" VerticalAlignment="Top" Width="160" BorderBrush="#FFD0D0D0" Foreground="Black" FontSize="18" Click="btnUserProfile_Click" />
+            <Button Content="Button" Height="3" HorizontalAlignment="Left" Margin="3,148,0,0" Name="button3" VerticalAlignment="Top" Width="7" />
+            <Button BorderBrush="#FFD0D0D0" Content="SNS Settings" FontSize="18" Foreground="Black" Height="72" HorizontalAlignment="Left" Margin="153,101,0,0" Name="btnSNSSettings" VerticalAlignment="Top" Width="160" Click="btnSNSSettings_Click" />
+            <Button BorderBrush="#FFD0D0D0" Content="About" FontSize="18" Foreground="Black" Height="72" HorizontalAlignment="Left" Margin="306,101,0,0" Name="btnAbout" VerticalAlignment="Top" Width="160" Click="btnAbout_Click" />
+        </Grid>
+    </Grid>
+
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>
